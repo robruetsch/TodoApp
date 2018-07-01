@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  todoclient:
+    image: ${DOCKER_REGISTRY}todoclient
+    build:
+      context: .
+      dockerfile: TodoClient\Dockerfile
+
+  todoapi:
+    image: ${DOCKER_REGISTRY}todoapi
+    build:
+      context: .
+      dockerfile: TodoApi/Dockerfile
+
